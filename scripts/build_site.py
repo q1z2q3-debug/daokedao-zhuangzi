@@ -67,7 +67,7 @@ ul{margin:0 0 14px 18px;padding:0}
 footer{border-top:1px solid var(--line);padding:30px 0 56px;margin-top:44px}
 footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
 @media(max-width:720px){
- .brand{font-size:13px;letter-spacing:.06em}nav{column-gap:10px}nav a{font-size:11.5px;letter-spacing:.02em}
+ header.top .wrap{padding:12px 18px;gap:10px}.wrap{padding:0 18px}.brand{font-size:12.5px;letter-spacing:.04em}nav{column-gap:8px}nav a{font-size:11px;letter-spacing:0}
  h1{font-size:28px}main{padding-top:34px}.row{grid-template-columns:1fr;gap:4px}.row .no{display:none}.row .go{text-align:left}
  .prevnext{flex-direction:column;gap:6px}
 }
