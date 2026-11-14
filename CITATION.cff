@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+title: "润泽说 道可道之庄子"
+message: "如果你引用了本书，请使用下列条目。"
+type: book
+authors:
+  - family-names: "润泽"
+    given-names: "润泽"
+    alias: "润泽博士"
+date-released: 2026-11-14
+version: 1.33.0
+license: CC-BY-NC-SA-4.0
+url: "https://q1z2q3-debug.github.io/daokedao-zhuangzi/"
+repository-code: "https://github.com/q1z2q3-debug/daokedao-zhuangzi"
+abstract: "《庄子》内七篇全帙、外十五篇与杂六篇逐篇深解：字源溯源、底本校勘、逐段拆解，以「合与和」一对分辨读庄。全书 290,793 字。"
+keywords:
+  - 庄子
+  - 道家
+  - 先秦哲学
+  - 字源
+  - 润泽说
+  - 道可道
