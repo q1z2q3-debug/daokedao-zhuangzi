@@ -5,6 +5,7 @@
 ## 读本
 - 全书一页（阅读版，单文件）：https://q1z2q3-debug.github.io/daokedao-zhuangzi/book.html
 - 篇目（28 篇 + 附录，一篇一页）：https://q1z2q3-debug.github.io/daokedao-zhuangzi/chapters/
+- 英文稿索引（28 篇，一篇一帖，dev.to）：https://q1z2q3-debug.github.io/daokedao-zhuangzi/english/
 - 下载（PDF / APK / Markdown 母本）：https://q1z2q3-debug.github.io/daokedao-zhuangzi/downloads/
 - 仓库：https://github.com/q1z2q3-debug/daokedao-zhuangzi
 - DOI：https://doi.org/10.5281/zenodo.24217537

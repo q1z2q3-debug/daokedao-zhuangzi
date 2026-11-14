@@ -73,7 +73,40 @@ footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
 }
 """
 
-NAV = [("/", "首页", "home"), ("/book.html", "全书", "book"), ("/chapters/", "篇目", "chapters"), ("/downloads/", "下载", "downloads")]
+NAV = [("/", "首页", "home"), ("/book.html", "全书", "book"), ("/chapters/", "篇目", "chapters"), ("/english/", "英文", "english"), ("/downloads/", "下载", "downloads")]
+
+
+# 英文稿：篇名 → dev.to 帖（28 篇，一篇一帖）
+EN_POSTS = {
+ "逍遥游": ("the hinge is 待 — to lean on a condition", "https://dev.to/q1z2q3debug/zhuangzi-1-xiaoyaoyou-the-hinge-is-dai-to-lean-on-a-condition-3cfa"),
+ "齐物论": ("齐 does not mean everything is the same", "https://dev.to/q1z2q3debug/zhuangzi-2-qiwulun-qi-does-not-mean-everything-is-the-same-1ccl"),
+ "养生主": ("督 means the middle, and the blade goes through a gap", "https://dev.to/q1z2q3debug/zhuangzi-3-yangshengzhu-du-means-the-middle-and-the-blade-goes-through-a-gap-lkh"),
+ "人间世": ("不得已 is about timing, not resignation", "https://dev.to/q1z2q3debug/zhuangzi-4-renjianshi-bu-de-yi-is-about-timing-not-resignation-3pb4"),
+ "德充符": ("符 is a tally that matches, not a badge you earn", "https://dev.to/q1z2q3debug/zhuangzi-5-dechongfu-fu-is-a-tally-that-matches-not-a-badge-you-earn-bd7"),
+ "大宗师": ("真人 has no additions, not extra powers", "https://dev.to/q1z2q3debug/zhuangzi-6-dazongshi-zhen-ren-has-no-additions-not-extra-powers-3m7b"),
+ "应帝王": ("应 means it answers, not that it ought to", "https://dev.to/q1z2q3debug/zhuangzi-7-yingdiwang-ying-means-it-answers-not-that-it-ought-to-5m8"),
+ "骈拇": ("骈 is two horses in one harness", "https://dev.to/q1z2q3debug/zhuangzi-outer-1-pianmu-pian-is-two-horses-in-one-harness-2e6c"),
+ "马蹄": ("the horse did not turn bad, it learned", "https://dev.to/q1z2q3debug/zhuangzi-outer-2-mati-the-horse-did-not-turn-bad-it-learned-5ed2"),
+ "胠箧": ("胠 means prying from the side", "https://dev.to/q1z2q3debug/zhuangzi-outer-3-quqie-qu-means-prying-from-the-side-7c2"),
+ "在宥": ("撄 is the hand that should not have moved", "https://dev.to/q1z2q3debug/zhuangzi-outer-4-zaiyou-ying-is-the-hand-that-should-not-have-moved-5ce5"),
+ "天地": ("机心 is a heart that sees the world as a machine", "https://dev.to/q1z2q3debug/zhuangzi-outer-5-tiandi-ji-xin-is-a-heart-that-sees-the-world-as-a-machine-74k"),
+ "天道": ("积 means stockpiling, and what stocks up can be taken", "https://dev.to/q1z2q3debug/zhuangzi-outer-6-tiandao-ji-means-stockpiling-and-what-stocks-up-can-be-taken-34b6"),
+ "天运": ("the straw dog's problem is not that it is fake", "https://dev.to/q1z2q3debug/zhuangzi-outer-7-tianyun-the-straw-dogs-problem-is-not-that-it-is-fake-ghn"),
+ "刻意": ("carving a shape into your mind, then cutting yourself to fit", "https://dev.to/q1z2q3debug/zhuangzi-outer-8-keyi-carving-a-shape-into-your-mind-then-cutting-yourself-to-fit-1efj"),
+ "缮性": ("a title that argues against its own title", "https://dev.to/q1z2q3debug/zhuangzi-outer-9-shanxing-a-title-that-argues-against-its-own-title-544f"),
+ "秋水": ("自多 is a disease of scale, not of character", "https://dev.to/q1z2q3debug/zhuangzi-outer-10-qiushui-zi-duo-is-a-disease-of-scale-not-of-character-43fn"),
+ "至乐": ("至乐无乐 means the ruler is put down", "https://dev.to/q1z2q3debug/zhuangzi-outer-11-zhile-zhi-le-wu-le-means-the-ruler-is-put-down-3l9k"),
+ "达生": ("达 is understanding, not prolonging", "https://dev.to/q1z2q3debug/zhuangzi-outer-12-dasheng-da-is-understanding-not-prolonging-2db4"),
+ "山木": ("the empty boat is the argument that does not happen", "https://dev.to/q1z2q3debug/zhuangzi-outer-13-shanmu-the-empty-boat-is-the-argument-that-does-not-happen-3akd"),
+ "田子方": ("真 is unadorned, and 目击而道存", "https://dev.to/q1z2q3debug/zhuangzi-outer-14-tianzifang-zhen-is-unadorned-and-mu-ji-er-dao-cun-2d24"),
+ "知北游": ("every character in this chapter is an argument", "https://dev.to/q1z2q3debug/zhuangzi-outer-15-zhibeiyou-every-character-in-this-chapter-is-an-argument-2eel"),
+ "庚桑楚": ("日计之而不足, 岁计之而有余", "https://dev.to/q1z2q3debug/zhuangzi-misc-1-gengsangchu-ri-ji-zhi-er-bu-zu-sui-ji-zhi-er-you-yu-c4k"),
+ "徐无鬼": ("劳 points in two directions", "https://dev.to/q1z2q3debug/zhuangzi-misc-2-xuwugui-lao-points-in-two-directions-4a7k"),
+ "则阳": ("相助以德, 相助消也", "https://dev.to/q1z2q3debug/zhuangzi-misc-3-zeyang-xiang-zhu-yi-de-xiang-zhu-xiao-ye-35cl"),
+ "外物": ("必 is the only thing on trial", "https://dev.to/q1z2q3debug/zhuangzi-misc-4-waiwu-bi-is-the-only-thing-on-trial-3oe9"),
+ "寓言": ("卮言 is not slippery speech", "https://dev.to/q1z2q3debug/zhuangzi-misc-5-yuyan-zhi-yan-is-not-slippery-speech-2aeh"),
+ "天下": ("方术 is a corner, 道术 is the whole", "https://dev.to/q1z2q3debug/zhuangzi-misc-6-tianxia-fang-zhu-is-a-corner-dao-zhu-is-the-whole-1n63"),
+}
 
 
 def head(title, desc, path, jsonld=None, act="home"):
@@ -276,7 +309,10 @@ def build():
 <div class="row"><div class="no">02</div><div><h3><a href="{SITE}/chapters/">篇目 · 一篇一页</a></h3>
 <p class="small" style="margin:0;">内七、外十五、杂六，逐篇独立成页，可单独引用</p></div>
 <div class="go"><a href="{SITE}/chapters/">篇目</a></div></div>
-<div class="row"><div class="no">03</div><div><h3><a href="{SITE}/downloads/">下载 · PDF 与安卓包</a></h3>
+<div class="row"><div class="no">03</div><div><h3><a href="{SITE}/english/">英文 · 二十八篇一篇一帖</a></h3>
+<p class="small" style="margin:0;">每篇一篇独立英文短论，取该篇最硬的一处字源分歧</p></div>
+<div class="go"><a href="{SITE}/english/">英文</a></div></div>
+<div class="row"><div class="no">04</div><div><h3><a href="{SITE}/downloads/">下载 · PDF 与安卓包</a></h3>
 <p class="small" style="margin:0;">成书 PDF（19.7 MB）与离线 APK（3.7 MB，零权限）</p></div>
 <div class="go"><a href="{SITE}/downloads/">下载</a></div></div>
 </div>
@@ -287,6 +323,41 @@ def build():
 
 <h2>体例</h2>
 <p>每篇七层：经文底本、本篇定位（时代与处境）、关键字溯源、逐段落深解、故事讲读、本篇总括、附录（诠释分歧与常见误读）。</p>
+</div></main>""" + foot(), encoding="utf-8")
+
+    # ---- 英文稿索引 ----
+    (DOCS / "english").mkdir(exist_ok=True)
+    en_rows = []
+    for r in recs:
+        en = EN_POSTS.get(r["name"])
+        if not en:
+            continue
+        title_en, url = en
+        en_rows.append(f"""<div class="row"><div class="no">{r['i']:02d}</div>
+<div><h3><a href="{url}" rel="noopener">{title_en}</a></h3>
+<p class="small" style="margin:0;">{r['name']}　·　<a href="{SITE}/chapters/{r['fn']}">中文篇页</a>　·　dev.to</p></div>
+<div class="go"><a href="{url}" rel="noopener">读英文</a></div></div>""")
+    en_ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": f"{TITLE} · 英文稿索引",
+             "url": f"{SITE}/english/", "inLanguage": "en",
+             "isPartOf": {"@type": "Book", "@id": f"{SITE}/book.html#book"},
+             "hasPart": [{"@type": "Article", "name": EN_POSTS[r["name"]][0], "url": EN_POSTS[r["name"]][1],
+                          "inLanguage": "en", "isPartOf": {"@id": f"{SITE}/chapters/{r['fn']}"}}
+                         for r in recs if r["name"] in EN_POSTS]}
+    (DOCS / "english" / "index.html").write_text(
+        head(f"英文稿索引｜{TITLE}",
+             "《庄子》二十八篇的英文逐篇稿：一篇一帖，每帖起于一句经文章句，中段做字源分层，末附中文篇页与 DOI。",
+             "/english/", en_ld, act="english") +
+        f"""<main><div class="wrap">
+<p class="eyebrow">English · dev.to</p>
+<h1>二十八篇，一篇一帖</h1>
+<p class="lede">内七篇与外十五篇、杂六篇各自写成一篇独立英文短论：起于一句经文章句，中段只做一件事——把该篇最硬的那处字源分歧摊开（待、齐、督、不得已、符、不假人为、应、骈、胠……），末尾一个可自测的问题。</p>
+<p class="small">{len(en_rows)} 篇　·　账号 <a href="https://dev.to/q1z2q3debug" rel="noopener">q1z2q3debug</a>　·　每帖 canonical 指回中文篇页　·　<a href="https://q1z2q3-debug.github.io/runze-daokedao/devto/">全系列英文稿总索引</a></p>
+<div class="list">
+{''.join(en_rows)}
+</div>
+<h2>为什么逐篇另写一帖</h2>
+<p>中文篇页是完整的（七层体例、逐段深解、诠释分歧），英文短论只取一处：一个字的字源与本义如何改变整篇的读法。两处入口指向同一个论点，可互为核验。</p>
+<p class="small">底本与引文出处同中文篇页；稿末附中文篇页、篇目、书站与 DOI <a href="https://doi.org/{DOI}">10.5281/zenodo.24217537</a>。</p>
 </div></main>""" + foot(), encoding="utf-8")
 
     # ---- 下载页 ----
@@ -318,6 +389,7 @@ def build():
 ## 读本
 - 全书一页（阅读版，单文件）：{SITE}/book.html
 - 篇目（28 篇 + 附录，一篇一页）：{SITE}/chapters/
+- 英文稿索引（28 篇，一篇一帖，dev.to）：{SITE}/english/
 - 下载（PDF / APK / Markdown 母本）：{SITE}/downloads/
 - 仓库：https://github.com/q1z2q3-debug/daokedao-zhuangzi
 - DOI：https://doi.org/{DOI}
@@ -341,7 +413,7 @@ def build():
                                              ["GPTBot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot", "PerplexityBot", "Google-Extended", "CCBot", "Bytespider"]) +
                                      f"\nSitemap: {SITE}/sitemap.xml\n", encoding="utf-8")
 
-    urls = ["/", "/book.html", "/chapters/", "/downloads/"] + [f"/chapters/{r['fn']}" for r in recs]
+    urls = ["/", "/book.html", "/chapters/", "/english/", "/downloads/"] + [f"/chapters/{r['fn']}" for r in recs]
     (DOCS / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
                                       "".join(f"<url><loc>{SITE}{u}</loc><lastmod>2026-11-14</lastmod></url>\n" for u in urls) + "</urlset>\n", encoding="utf-8")
 
