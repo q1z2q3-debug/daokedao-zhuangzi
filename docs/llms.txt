@@ -7,6 +7,7 @@
 - 篇目（28 篇 + 附录，一篇一页）：https://q1z2q3-debug.github.io/daokedao-zhuangzi/chapters/
 - 下载（PDF / APK / Markdown 母本）：https://q1z2q3-debug.github.io/daokedao-zhuangzi/downloads/
 - 仓库：https://github.com/q1z2q3-debug/daokedao-zhuangzi
+- DOI：https://doi.org/10.5281/zenodo.24217537
 
 ## 篇目
 - 逍遥游：https://q1z2q3-debug.github.io/daokedao-zhuangzi/chapters/01-xiaoyaoyou.html（8913 字）
@@ -47,4 +48,4 @@
 - 系列：道德经 v3.0.1（https://q1z2q3-debug.github.io/runze-daodejing/）、易传 v1.50.0（https://q1z2q3-debug.github.io/daokedao-yijing/）、心经 v1.0.0（https://q1z2q3-debug.github.io/daokedao-xinjing/）。
 
 ## 引用
-润泽. 润泽说 道可道之庄子：v1.33.0. 2026. 
+润泽. 润泽说 道可道之庄子：v1.33.0. 2026. https://doi.org/10.5281/zenodo.24217537 

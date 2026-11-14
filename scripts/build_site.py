@@ -17,7 +17,7 @@ SITE = "https://q1z2q3-debug.github.io/daokedao-zhuangzi"
 SERIES = "润泽说 道可道"
 TITLE = "润泽说 道可道之庄子"
 VER = "1.33.0"
-DOI = ""   # 待 Zenodo 存缴后填入
+DOI = "10.5281/zenodo.24217537"
 
 # 篇目：(卷次, 组, 篇名, slug)
 P_SLUG = {
@@ -112,7 +112,7 @@ def head(title, desc, path, jsonld=None, act="home"):
 def foot():
     return f"""<footer><div class="wrap">
 <div class="small">{SERIES}之庄子　·　v{VER}　·　CC BY-NC-SA 4.0<br><a href="{SITE}/llms.txt">llms.txt</a>　·　<a href="{SITE}/sitemap.xml">sitemap</a></div>
-<div class="small"><a href="https://github.com/q1z2q3-debug/daokedao-zhuangzi">GitHub</a>　·　<a href="https://q1z2q3-debug.github.io/runze-daokedao/">系列总站</a></div>
+<div class="small"><a href="https://github.com/q1z2q3-debug/daokedao-zhuangzi">GitHub</a>　·　<a href="https://doi.org/{DOI}">DOI</a>　·　<a href="https://q1z2q3-debug.github.io/runze-daokedao/">系列总站</a></div>
 </div></footer>
 </body></html>
 """
@@ -216,7 +216,7 @@ def build():
         body_html = f"""<main><div class="wrap">
 <p class="eyebrow">{grp}　·　第 {i} 篇　·　{wc} 字</p>
 <h1>{H.escape(name)}</h1>
-<p class="small">底本：郭庆藩《庄子集释》校王先谦《庄子集解》，异文随文出注　·　<a href="{SITE}/book.html">全书阅读版</a>　·　<a href="{SITE}/chapters/">篇目</a></p>
+<p class="small">底本：郭庆藩《庄子集释》校王先谦《庄子集解》，异文随文出注　·　<a href="{SITE}/book.html">全书阅读版</a>　·　<a href="{SITE}/chapters/">篇目</a>　·　<a href="https://doi.org/{DOI}">DOI {DOI}</a></p>
 <article>{md2html(body)}</article>
 <div class="prevnext">{prev}<a href="{SITE}/chapters/">篇目</a>{nxt}</div>
 </div></main>"""
@@ -266,7 +266,7 @@ def build():
 <p class="eyebrow">{SERIES}</p>
 <h1>道可道之庄子</h1>
 <p class="lede">万物皆客，你我皆自主。内七篇全帙，外十五篇、杂六篇逐篇成文，末附立言法度一卷。全书 {sum(r['wc'] for r in recs):,} 字。</p>
-<p class="small">v{VER}　·　28 篇 + 附录　·　CC BY-NC-SA 4.0</p>
+<p class="small">v{VER}　·　28 篇 + 附录　·　CC BY-NC-SA 4.0　·　<a href="https://doi.org/{DOI}">DOI {DOI}</a></p>
 
 <h2>怎么读</h2>
 <div class="list">
@@ -320,6 +320,7 @@ def build():
 - 篇目（28 篇 + 附录，一篇一页）：{SITE}/chapters/
 - 下载（PDF / APK / Markdown 母本）：{SITE}/downloads/
 - 仓库：https://github.com/q1z2q3-debug/daokedao-zhuangzi
+- DOI：https://doi.org/{DOI}
 
 ## 篇目
 """ + "\n".join(f"- {r['name']}：{SITE}/chapters/{r['fn']}（{r['wc']} 字）" for r in recs) + f"""
@@ -332,7 +333,7 @@ def build():
 - 系列：道德经 v3.0.1（https://q1z2q3-debug.github.io/runze-daodejing/）、易传 v1.50.0（https://q1z2q3-debug.github.io/daokedao-yijing/）、心经 v1.0.0（https://q1z2q3-debug.github.io/daokedao-xinjing/）。
 
 ## 引用
-润泽. {TITLE}：v{VER}. 2026. 
+润泽. {TITLE}：v{VER}. 2026. https://doi.org/{DOI} 
 """, encoding="utf-8")
 
     (DOCS / "robots.txt").write_text("User-agent: *\nAllow: /\n\n" +

@@ -13,6 +13,7 @@
 | 入口 | 地址 | 说明 |
 |---|---|---|
 | 站 | <https://q1z2q3-debug.github.io/daokedao-zhuangzi/> | 首页、篇目、下载，三页可达全书 |
+| DOI | <https://doi.org/10.5281/zenodo.24217537> | Zenodo 存缴，附 md / pdf / html / apk 四件 |
 | 全书一页 | </book.html> | 单文件自包含，断网可读 |
 | 篇目 | </chapters/> | 内七、外十五、杂六，一篇一页，可单独引用 |
 | 下载 | </downloads/> | 成书 PDF（326 页）、离线性 APK（3.7 MB）、Markdown 母本 |
@@ -48,7 +49,7 @@ packages/  离线 APK 与校验值
 
 ## 五、引用
 
-润泽. 润泽说 道可道之庄子：v1.33.0. 2026. https://github.com/q1z2q3-debug/daokedao-zhuangzi
+润泽. 润泽说 道可道之庄子：v1.33.0. 2026. https://doi.org/10.5281/zenodo.24217537
 
 ## 六、系列
 
@@ -57,7 +58,7 @@ packages/  离线 APK 与校验值
 | 一 | 润泽说 道可道之道德经 | <https://q1z2q3-debug.github.io/runze-daodejing/> | v3.0.1，81 章 |
 | 二 | 润泽说 道可道之易传 | <https://q1z2q3-debug.github.io/daokedao-yijing/> | v1.50.0，72 卷 |
 | 三 | 润泽说 道可道之心经通释 | <https://q1z2q3-debug.github.io/daokedao-xinjing/> | v1.0.0 |
-| 四 | 润泽说 道可道之庄子 | <https://q1z2q3-debug.github.io/daokedao-zhuangzi/> | v1.33.0，28 篇 |
+| 四 | 润泽说 道可道之庄子 | <https://q1z2q3-debug.github.io/daokedao-zhuangzi/> | v1.33.0，28 篇，DOI 已存缴 |
 | — | 系列总站 | <https://q1z2q3-debug.github.io/runze-daokedao/> | 导航、对照、英文稿索引 |
 
 ## 七、许可
