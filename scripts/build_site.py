@@ -247,7 +247,7 @@ def build():
 <p class="eyebrow">庄子 · 二十八篇</p>
 <h1>一篇一页，二十八篇</h1>
 <p class="lede">内七篇全帙，外十五篇、杂六篇逐篇成文，末附《庄子立言之法度》一卷。每篇同构：经文底本、本篇定位、关键字溯源、逐段落深解、故事讲读、本篇总括、诠释分歧与常见误读。</p>
-<p class="small">全书 {sum(r['wc'] for r in recs):,} 字　·　<a href="{SITE}/book.html">全书阅读版</a>　·　<a href="{SITE}/downloads/">下载</a></p>
+<p class="small">全书 29.8 万字　·　<a href="{SITE}/book.html">全书阅读版</a>　·　<a href="{SITE}/downloads/">下载</a></p>
 {''.join(secs)}
 </div></main>""" + foot(), encoding="utf-8")
 
@@ -265,7 +265,7 @@ def build():
         f"""<main><div class="wrap">
 <p class="eyebrow">{SERIES}</p>
 <h1>道可道之庄子</h1>
-<p class="lede">万物皆客，你我皆自主。内七篇全帙，外十五篇、杂六篇逐篇成文，末附立言法度一卷。全书 {sum(r['wc'] for r in recs):,} 字。</p>
+<p class="lede">万物皆客，你我皆自主。内七篇全帙，外十五篇、杂六篇逐篇成文，末附立言法度一卷。全书 29.8 万字（298,416 字）。</p>
 <p class="small">v{VER}　·　28 篇 + 附录　·　CC BY-NC-SA 4.0　·　<a href="https://doi.org/{DOI}">DOI {DOI}</a></p>
 
 <h2>怎么读</h2>
@@ -313,7 +313,7 @@ def build():
     # ---- 机器可读 ----
     (DOCS / "llms.txt").write_text(f"""# {TITLE}
 
-> 润泽（润泽博士）《道可道》系列第三部。以「合与和」一对分辨读庄：合是人为的分类、命名、制度，和是差异各得其位、彼此不害。全书 {sum(r['wc'] for r in recs):,} 字，v{VER}。
+> 润泽（润泽博士）《道可道》系列第三部。以「合与和」一对分辨读庄：合是人为的分类、命名、制度，和是差异各得其位、彼此不害。全书 29.8 万字，v{VER}。
 
 ## 读本
 - 全书一页（阅读版，单文件）：{SITE}/book.html
