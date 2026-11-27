@@ -3,3 +3,12 @@ _shots/
 .DS_Store
 __pycache__/
 *.pyc
+
+# APK 工程
+dist/apk-zhuangzi-web/build/
+dist/apk-zhuangzi-web/.debug.keystore
+dist/apk-zhuangzi-web/app/src/main/assets/
+dist/apk-zhuangzi-web/.gradle/
+dist/apk-zhuangzi-web/local.properties
+dist/*.apk
+*.idsig

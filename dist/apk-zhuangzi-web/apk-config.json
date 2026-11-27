@@ -1,0 +1,40 @@
+{
+  "slug": "zhuangzi",
+  "out": "daokedao-zhuangzi",
+  "package": "com.runze.daokedaozhuangzi",
+  "app_name": "道可道之庄子",
+  "version_code": 1330,
+  "version_name": "1.33.0",
+  "docs": "docs",
+  "entry": "index.html",
+  "copy_files": [
+    "index.html",
+    "book.html",
+    "favicon.svg",
+    "llms.txt",
+    "downloads/index.html"
+  ],
+  "copy_dirs": [
+    "chapters",
+    "english"
+  ],
+  "site_prefixes": [
+    "https://q1z2q3-debug.github.io/daokedao-zhuangzi/",
+    "https://q1z2q3-debug.github.io/daokedao-zhuangzi",
+    "/daokedao-zhuangzi/"
+  ],
+  "bare_index_fix": true,
+  "strip_blocks": [
+    [
+      "<!-- apk-dl:start -->",
+      "<!-- apk-dl:end -->"
+    ]
+  ],
+  "strip_hrefs": [
+    "sitemap.xml",
+    "sitemap.xml"
+  ],
+  "strip_link_regex": [
+    "fonts/css2"
+  ]
+}
