@@ -32,7 +32,8 @@
   "strip_hrefs": [
     "sitemap.xml",
     "sitemap.xml",
-    "downloads/"
+    "downloads/",
+    "../downloads/"
   ],
   "strip_link_regex": [
     "fonts/css2"

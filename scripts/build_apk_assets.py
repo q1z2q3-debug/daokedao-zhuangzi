@@ -65,7 +65,7 @@ def rewrite_html(path, prefix, cfg):
         s, k = re.subn(re.escape(start) + r'[\s\S]*?' + re.escape(end) + r'\n?', '', s)
         n += k
     for href in cfg.get('strip_hrefs', []):
-        s, k = re.subn(r'<a href="%s">[^<]*</a>' % re.escape(href), '', s)
+        s, k = re.subn(r'<a[^>]*href="%s"[^>]*>.*?</a>' % re.escape(href), '', s, flags=re.S)
         n += k
     for pat in cfg.get('strip_link_regex', []):
         s, k = re.subn(r'[ \t]*<link[^>]*%s[^>]*>\s*\n?' % pat, '', s)
