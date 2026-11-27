@@ -44,13 +44,13 @@ PY
 
 "$BT/zipalign" -p -f 4 build/unsigned.apk build/aligned.apk
 
-KS=.debug.keystore
+KS=${APK_KS:-/home/user/keys/runze-release.keystore}
 if [ ! -f "$KS" ]; then
   keytool -genkeypair -keystore "$KS" -alias androiddebugkey -storepass android -keypass android \
     -dname "CN=Runze, O=Daokedao, C=CN" -keyalg RSA -keysize 2048 -validity 10000 >/dev/null 2>&1
 fi
 
-"$BT/apksigner" sign --ks "$KS" --ks-pass pass:android --key-pass pass:android \
+"$BT/apksigner" sign --ks "$KS" --ks-pass pass:runze2026 --key-pass pass:runze2026 \
   --v1-signing-enabled true --v2-signing-enabled true --v3-signing-enabled true \
   --out "$OUTFILE" build/aligned.apk
 

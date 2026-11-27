@@ -11,8 +11,7 @@
     "index.html",
     "book.html",
     "favicon.svg",
-    "llms.txt",
-    "downloads/index.html"
+    "llms.txt"
   ],
   "copy_dirs": [
     "chapters",
